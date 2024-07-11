@@ -18,7 +18,9 @@ public class Main {
         DataStructures dataStructures = new DataStructures();
         //System.out.println(dataStructures.findEl(new int[]{11 , 1, 10}, 10));
 
-        int[] list = dataStructures.returnList(new int[]{1, 2, 3, 4, 5}, 2);
-        System.out.println(Arrays.toString(list));
+        int[] list = dataStructures.returnList(new int[]{1, 2, 3, 4, 5}, 4);
+        //System.out.println(Arrays.toString(list));
+
+        System.out.println(dataStructures.binarySearch(new int[]{1, 2, 3, 4, 5}, 0, 4, 5));
     }
 }

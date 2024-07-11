@@ -1,8 +1,5 @@
 package pack;
 
-import java.lang.reflect.Array;
-import java.util.List;
-
 public class DataStructures {
     // int arr
     public int findEl(int[] arr,  int key){
@@ -26,8 +23,17 @@ public class DataStructures {
         return output;
     }
 
-    // Arrays delete el by index
-    public List<Integer> listAfterDeleteEl(){
-        return null;
+    // binary search in array
+    public int binarySearch(int[] arr, int start, int end, int key){
+        int middle = (start + end)/2;
+        int pos = -1;
+        if (key == arr[middle]){
+            return middle;
+        }
+        if (key > middle){
+            return binarySearch(arr, (middle + 1), end, key);
+        }
+        return binarySearch(arr, start, (middle - 1), key);
     }
+
 }
